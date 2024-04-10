@@ -1,5 +1,7 @@
 # Text Summarizer - A NLP Application
 
+<img width="1659" alt="ui" src="https://github.com/AbhishekJ24/SummarizeMe-NLP-Text-Summarizer/assets/90437046/8e553e27-d447-4e7c-8dc4-17b6b71174e5">
+
 ## Introduction
 
 This project is a Text Summarizer application built using Natural Language Processing (NLP) techniques. It allows users to input text and generate a summarized version of the input text based on the specified number of lines.
