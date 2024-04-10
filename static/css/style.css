@@ -22,6 +22,7 @@ h1 {
 }
 
 h1:hover {
+    transition: all ease-in 100ms ;
     filter: invert(1);
 }
 
@@ -44,6 +45,18 @@ label {
     padding: 20px;
 }
 
+.stack-head{
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 42%;
+}
+
+.stack-head:hover{
+    transition: all ease-in 100ms ;
+    filter: invert(1);
+
+}
+
 .stack {
     display: flex;
     justify-content: center;
@@ -58,6 +71,7 @@ label {
 }
 
 .stack img:hover {
+    transition: all ease-in 100ms ;
     transform: scale(1.05);
     filter: invert(1);
 }
@@ -76,11 +90,13 @@ footer {
 }
 
 #download-pdf-btn a img {
-    filter: invert();
+    filter: invert(1);
 }
 
 #download-pdf-btn:hover {
-    transform: scale(1.1);
+    filter: invert(1);
+    transition: all ease-in 1ms;
+    transform: scale(1.2);
 }
 
 footer>* {

@@ -21,9 +21,9 @@
             <form action="/summarize" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="text">Enter your text</label>
-                    <textarea name="text" id="text" cols="25" rows="4" class="form-control"></textarea>
+                    <textarea name="text" id="text" cols="25" rows="4" class="form-control" required></textarea>
                     <label for="text">Number of Lines</label>
-                    <input type="number" name="lines" id="lines" class="form-control"></input>
+                    <input type="number" name="lines" id="lines" class="form-control" required></input>
                 </div>
                 <button type="submit" class="btn btn-primary">Summarize Text</button>
             </form>
@@ -36,7 +36,7 @@
 
         </div>
 
-        <h1 class="text-center">Technology Stack</h1>
+        <span class="stack-head">Technology Stack</span>
         <div class="stack">
             <img src="/static/images/python.svg" alt="PYTHON">
             <img src="/static/images/flask.svg" alt="FLASK">
