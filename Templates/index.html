@@ -28,10 +28,11 @@
                 <button type="submit" class="btn btn-primary">Summarize Text</button>
             </form>
             <br>
-
-            {% if summarized_text %}
-            <h5>Summarized Text: <br> {{summarized_text}}</h5>
-            {% endif %}
+            <div id="summary-box">
+                {% if summarized_text %}
+                <h6>Summarized Text: <br> {{summarized_text}}</h6>
+                {% endif %}
+            </div>
 
         </div>
 

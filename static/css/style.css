@@ -38,6 +38,12 @@ label {
     margin-bottom: 5px;
 }
 
+#summary-box {
+    background-color: rgb(33, 30, 54);
+    border-radius: 20px;
+    padding: 20px;
+}
+
 .stack {
     display: flex;
     justify-content: center;
