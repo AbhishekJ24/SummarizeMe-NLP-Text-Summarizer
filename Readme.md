@@ -1,28 +1,42 @@
-# SummarizeMe
+# Text Summarizer - A NLP Application
 
-LinguoCheck is a NLP (Natural Language Processing) project designed to perform various linguistic checks and corrections. It utilizes Python for modeling, incorporating the TextBlob library for NLP tasks. Additionally, it includes a Flask backend for the front end developed with HTML and CSS. It also uses Bootstrap for easing up the development work.
+## Introduction
 
-## Features
+This project is a Text Summarizer application built using Natural Language Processing (NLP) techniques. It allows users to input text and generate a summarized version of the input text based on the specified number of lines.
 
-- **Text Correction:** Utilizes TextBlob for basic text correction and analysis.
-- **Grammar Check:** Formerly used Gingerit (now deprecated) for advanced grammar checking.
-- **User Interface:** Front end developed using HTML and CSS, with Flask as the backend to handle user requests.
+The application is developed using Python with the Flask framework for the backend and HTML, CSS, and Bootstrap for the frontend.
+
+## Installation
+
+1. Clone the repository:
+`git clone https://github.com/AbhishekJ24/SummarizeMe-NLP-Text-Summarizer.git`
+
+2. Navigate to the project directory:
+`cd SummarizeMe-NLP-Text-Summarizer`
+
+3. Install dependencies:
+`pip install -r requirements.txt`
 
 ## Usage
 
-1. **Clone the Repository:**
-   `git clone https://github.com/AbhishekJ24/LinguoCheck-NLP-Grammar-Checker.git`
-   `cd linguocheck`
+1. Start the Flask application:
+`python app.py`
+2. Open a web browser and go to `http://localhost:5000/`.
+3. Enter your text in the input box and specify the number of lines for the summary.
+4. Click the "Summarize Text" button to generate the summary.
 
-2. **Install Dependencies:**
-   `pip install -r requirements.txt`
+## Technology Stack
 
-3. **Run the Application:**
-   `python app.py`
+- Python
+- Flask
+- HTML
+- CSS
+- Bootstrap
 
-4. **Access the Application:**
-Open your web browser and go to a localhost server to use LinguoCheck.
+## Author
 
-## Contributing
+- Abhishek Joshi
 
-Contributions are welcome! If you have suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+## Acknowledgements
+
+- NLTK Library (Natural Language Toolkit)
