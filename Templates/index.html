@@ -25,13 +25,22 @@
                     <label for="text">Number of Lines</label>
                     <input type="number" name="lines" id="lines" class="form-control" required></input>
                 </div>
-                <button type="submit" class="btn btn-primary">Summarize Text</button>
+                <button type="submit" class="btn btn-primary">Summarize Text and Generate Keywords</button>
             </form>
             <br>
-            <div id="summary-box">
+            <div class="summary-box">
                 {% if summarized_text %}
                 <h6>Summarized Text: <br> {{summarized_text}}</h6>
                 {% endif %}
+            </div>
+            <div class="summary-box top-margin">
+                {% if keywords %}
+                <h6>Keywords: <br> {{keywords}}</h6>
+                {% endif %}
+            </div>
+            <div>
+                <img src="/Users/gamingspectrum24/Documents/University Coursework/6th Semester/Natural Language Processing/SummarizeMe-NLP-Text-Summarizer/static/imageswordcloud.png"
+                    alt="" srcset="">
             </div>
 
         </div>

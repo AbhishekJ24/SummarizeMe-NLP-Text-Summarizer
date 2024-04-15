@@ -2,13 +2,17 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
 from heapq import nlargest
 import nltk
+from collections import Counter
+from nltk.stem import WordNetLemmatizer
+from wordcloud import WordCloud
+import string
 
 nltk.download('stopwords')
 nltk.download('punkt')
 
 class SummarizerModule:
     def __init__(self):
-        pass
+        self.lemmatizer = WordNetLemmatizer()
     
     def calculate_sentence_scores(self, sentences, word_frequencies):
         sentence_scores = {}
@@ -42,3 +46,18 @@ class SummarizerModule:
         summary_sentences = nlargest(num_sentences, sentence_scores, key=sentence_scores.get)
         summary = ' '.join(summary_sentences)
         return summary
+    
+    def extract_keywords(self, text, num_keywords=5):
+        stop_words = set(stopwords.words('english'))
+        words = word_tokenize(text.lower())
+        filtered_words = [word for word in words if word not in stop_words and word not in string.punctuation]
+        lemmatized_words = [self.lemmatizer.lemmatize(word) for word in filtered_words]
+        word_freq = Counter(lemmatized_words)
+        keywords = [word for word, _ in word_freq.most_common(num_keywords)]
+        return keywords
+    
+    def save_word_cloud(self, keywords):
+        keywords_str = ' '.join(keywords)
+        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(keywords_str)
+        wordcloud.to_file("/Users/gamingspectrum24/Documents/University Coursework/6th Semester/Natural Language Processing/SummarizeMe-NLP-Text-Summarizer/static/images/wordcloud.png")
+
